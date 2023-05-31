@@ -147,7 +147,12 @@ CIFAR-10 데이터셋은 이미지 분류 딥러닝 모델에 대한 성능을 �
 - Patch Embedding : Image patch 를 통해 1D embedding을 만듦
 - HyperParameter : {'patch_size': (2,4), 'embed_dim': 128, 'num_heads': (8,12), 'sequence_length': (64, 256)}
 변경해 가면서 학습 수행
-- 최고 성능의 Parameter : {'patch_size': 2, 'embed_dim': 128, 'num_heads': 8, 'sequence_length': 256}
+- 최고 성능의 Parameter : {'patch_size': 4, 'embed_dim': 128, 'num_heads': 8, 'sequence_length': 256}
+<figure class="half">
+     <img src = "https://drive.google.com/uc?id=1XG73zXkZYqH5QP28F2TOGSHGzY30ggiE" width = 200>
+     <img src = "https://drive.google.com/uc?id=1DhRoD-mn1U5ZEz-xXEMb3nfTUG1Axyb8" width = 212>
+<figure>
+
 
 > num_attention_heads (int, optional, defaults to 12) — Number of attention heads for each attention layer in the Transformer encoder.
 
@@ -189,8 +194,7 @@ Non-trainable params: 0
 ---
 ### 2.학습시간 비교
 
-VGG(2.35s) < ViT (6.20 s) < EfficientNet(10.06s) 
-
+VGG(2.35s) <  EfficientNet(10.06s) < ViT (min 13.40s ~ max 76.24s)  
 
 모든 모델의 초기 학습 속도가 오래걸리나 
 EfficientNet 초기 학습 속도가 특히 오래 걸림 
@@ -202,8 +206,8 @@ EfficientNet 초기 학습 속도가 특히 오래 걸림
 <img src = "https://drive.google.com/uc?id=1j7kfWpQ-HhzD6g4VIk0gWb5KAxBRubMW" height = 300 width = 1000>
 2. EfficientNet V2 B0 : 93.97 % (EfficientNetB0 성능 : 73.8047%)
 <img src = "https://drive.google.com/uc?id=1od1HZccHyytmNBGcl7NaNsLguGJ1cGI6" height = 300 width = 1000>
-3. ViT : 88.45 %
-<img src = "https://drive.google.com/uc?id=1rwxuV3mk1biYlSqLM0RM3YNb1tXPII5m" height = 300 width = 1000>
+3. ViT : 88.81 %
+<img src = "https://drive.google.com/uc?id=19cEpBPSnASxGpYQHFYjlHv0PQIwzKVtg" height = 300 width = 1000>
 
 
 ### 모델 선정 결과 : EfficientNetV2

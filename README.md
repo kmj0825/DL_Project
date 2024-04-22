@@ -10,9 +10,9 @@
 - 생성된 이미지 인지 실제 이미지 인지 사람이 구별하기 어려운 문제가 다수 발생
 
 
-<img src = "https://drive.google.com/uc?id=1gwrWY9N39PqSKCEif3mC7YpCwZs7u6nr"  width = 1000>
+<img src = "https://i.imgur.com/zMhYPst.png"  width = 1000>
 
-<img src = "https://drive.google.com/uc?id=1Qb7plPSZKF3OGt291cmvdn3DMc7FZlhn"  width = 1000>
+<img src = "https://i.imgur.com/dodkKxS.png"  width = 1000>
 
 - 위와 같은 상황에서 AI 생성 이미지를 판별하는 것은 중요한 문제점 중 하나라고 판단하였습니다. 
 
@@ -20,8 +20,8 @@
 #### **생성 이미지 판별에 적합한 모델은 무엇일까?**
 - 현재 고화질로 생성되는 이미지에 대해서 판별해주는 모델은 명확히 존재하지 않습니다. 
 
-<img src = "https://drive.google.com/uc?id=1kJApbqhukRK94XehZHht1c88ISO2jUPs" width = 1000>
-<img src = "https://drive.google.com/uc?id=1A5TvoI3GNFytZkx0WmcLE8Kl_UMQnZR1" width = 1000>
+<img src = "https://i.imgur.com/PQzakdN.png" width = 1000>
+<img src = "https://i.imgur.com/d9eWTzE.png" width = 1000>
 
 - 위와 같은 사이트에서도 진위 판별만 제공하고 있고, 어떤 모델을 사용하여 판별하는지는 제공하지 않고 있는 상황
 - 현재 Image Classification 문제에서 가장 성능이 좋은 모델(CIFAR-10)은 ViT-L/16, DINOv2 과 같은 Vision Transformer 기반
@@ -52,13 +52,11 @@ CIFAR-10 데이터셋은 이미지 분류 딥러닝 모델에 대한 성능을 �
 #####  : CIFAKE 데이터셋이 단순하여 기본 CNN 이 유효한 성능을 가졌지만 고화질로 갈수록 문제가 있을 것이라 판단하여 더 높은 화질을 가진 데이터셋에서도 성능이 유효할 모델로 선정
 
 
-<img src = "https://drive.google.com/uc?id=1lECwsj5YsUAInvaTVl0dQgI5j889_C4q" width = 1000>
+<img src = "https://i.imgur.com/eNcOnUK.png" width = 1000>
 
 
 ##### 최종적으로 가장 높은 Accuracy 는 92.93 % 
 #####  : CIFAKE 논문에서 제시하는 92.93 % 의 Accuracy 를 넘는 모델 학습 및 선정 후 제안
-
-
 
 
 
@@ -78,7 +76,7 @@ CIFAR-10 데이터셋은 이미지 분류 딥러닝 모델에 대한 성능을 �
   - 전역적인 정보를 캡처하기 위해 self-attention 메커니즘을 사용하며, 이미지의 다양한 위치 간의 상호 작용을 고려
   - 유연한 구조 (입력 이미지의 크기나 해상도에 상관없이) 및 모듈성을 가짐 
 
-<img src = "https://drive.google.com/uc?id=1s8sKnwDGgtCTNrz1iS6Cd015L3VGtbkY" width = 1000>
+<img src = "https://i.imgur.com/LpJbMJ3.png" width = 1000>
 
 
 #### 주제에 대한 HyperParameter 
@@ -101,14 +99,14 @@ CIFAR-10 데이터셋은 이미지 분류 딥러닝 모델에 대한 성능을 �
 ### 2. 모델별 학습 및 분석 과정
 
 #### 1. VGGNET16 
-<img src = "https://drive.google.com/uc?id=1p8AP7Vhf_SWth6Je3LqEfKU79orFJTHq" height = 300 width = 1000>
+<img src = "https://i.imgur.com/DJEkL5p.png" height = 300 width = 1000>
 
 
 #### 2-1. EfficientNet
  
 - MBConv2D : Mobile Inverted Bottleneck (중간에서 channel 수를 늘리고, 마지막에서 감소)
 
-<img src = "https://drive.google.com/uc?id=19IBtvBexnifKo3fsnxHcDvykuUjePve7" height = 500 width = 1000>
+<img src = "https://i.imgur.com/D1cfQax.png" height = 500 width = 1000>
 
 - Compound scaling 
   - 이 depth, width, resolution이라는 세 가지 변수는 밀접하게 연관되어 있으며, 이를 같이 움직이는 것이 도움이 될 것
@@ -117,18 +115,23 @@ CIFAR-10 데이터셋은 이미지 분류 딥러닝 모델에 대한 성능을 �
 를 1로 고정해서) 먼저 좋은 α,β, γ 를 찾고(STEP 1) 그 다음에 전체적인 크기를 키운다(STEP 2). 
 
 `<figure class="third">`
-    <img src = "https://drive.google.com/uc?id=1TB-QJcFB8xRgjd5Aln-ptNzh07f0EOsc" width=300>
-    <img src = "https://drive.google.com/uc?id=1cpX9DAP-jqBm7afDHpBIV3lLieoCZNGJ" width=200>
-    <img src = "https://drive.google.com/uc?id=1_dR4EBoXr2P9fCnFRMePEDXUIMNwOEtI" width=300>
+    <img src = "![image](https://github.com/kmj0825/DL_Project/assets/67963713/72876ef1-1f7a-4735-b5dc-bfa435d78367)
+" width=300>
+    <img src = "![image](https://github.com/kmj0825/DL_Project/assets/67963713/c6b0646f-9abf-4141-b2e8-46846cdd0f34)
+" width=200>
+    <img src = "![image](https://github.com/kmj0825/DL_Project/assets/67963713/c73a6464-aaa6-4ee2-90ef-fd643f60fe04)
+" width=300>
 <figure>
-<img src = "https://drive.google.com/uc?id=1g6db6TkDz8z_7HgnlO-aLEcgUwZb3Oxu" width = 500>
+<img src = "![image](https://github.com/kmj0825/DL_Project/assets/67963713/f5099510-6b12-4c59-82eb-e9011b09e378)
+" width = 500>
 
 
 
 #### 2-2. EfficientNetV2
 - Progressive Resizing with adaptive regularization : 작은 크기의 이미지에서 큰 크기의 이미지의 순서로 이미지 크기를 동적으로 조절하여 모델을 학습하는 방법
   - 이전 EfficientNet 은 B0~B7 에 포함되지 않는 사이즈를 가진 이미지는 작은 이미지를 큰 이미지로 크기 변환해서 학습하는 문제점 발생 
-  <img src = "https://drive.google.com/uc?id=166GwSWTG0p1sYTP53swks1XWcUzcM1On">
+  <img src = "![image](https://github.com/kmj0825/DL_Project/assets/67963713/9bdb0f32-3e71-400f-9731-42b8be15e232)
+">
   - 이미지의 크기가 512인 경우가 380인 경우보다 단위 시간동안 적은 수의 이미지를 학습
   - 작은 크기의 이미지로 학습할 때는 정보량이 많지 않아서 작은 용량의 모델로도 충분히 학습이 가능하기 때문에 regularization의 강도를 줄이고 큰 이미지의 경우 강도를 키워야함 
 - Fused-MBConv
@@ -136,21 +139,26 @@ CIFAR-10 데이터셋은 이미지 분류 딥러닝 모델에 대한 성능을 �
    - depthwise 3x3 convolution 연산을 3x3 convolution 연산으로 전환
 
 <figure class="half">
-     <img src = "https://drive.google.com/uc?id=1cpX9DAP-jqBm7afDHpBIV3lLieoCZNGJ" width = 400>
-     <img src = "https://drive.google.com/uc?id=13naFZVGdhxlmHoZLFLyebNI5LfdgQ9R7" width = 400>
+     <img src = "![image](https://github.com/kmj0825/DL_Project/assets/67963713/3dd51653-8385-4c26-8314-22a93c006504)
+" width = 400>
+     <img src = "![image](https://github.com/kmj0825/DL_Project/assets/67963713/39bbb5a1-8599-4346-86fd-e4b09ca8838f)
+" width = 400>
 <figure>
 
 
 #### 3. ViT (Vision Transformer)
 -  ViT는 Transformer의 Encoder부분(Self-Attention)을 그대로 응용
-<img src = "https://drive.google.com/uc?id=1YzkV8oqRUP5-7lCI_73FnFs82ZPccYwA">
+<img src = "![image](https://github.com/kmj0825/DL_Project/assets/67963713/72f5fa44-79b9-40a5-bea1-6748f7d872fa)
+">
 - Patch Embedding : Image patch 를 통해 1D embedding을 만듦
 - HyperParameter : {'patch_size': (2,4), 'embed_dim': 128, 'num_heads': (8,12), 'sequence_length': (64, 256)}
 변경해 가면서 학습 수행
 - 최고 성능의 Parameter : {'patch_size': 4, 'embed_dim': 128, 'num_heads': 8, 'sequence_length': 256}
 <figure class="half">
-     <img src = "https://drive.google.com/uc?id=1XG73zXkZYqH5QP28F2TOGSHGzY30ggiE" width = 200>
-     <img src = "https://drive.google.com/uc?id=1DhRoD-mn1U5ZEz-xXEMb3nfTUG1Axyb8" width = 212>
+     <img src = "![image](https://github.com/kmj0825/DL_Project/assets/67963713/88dcc3e8-d0f6-441f-a5c7-1f36d3eba571)
+" width = 200>
+     <img src = "![image](https://github.com/kmj0825/DL_Project/assets/67963713/c869ec8d-1b2a-45ae-9ee5-785fe899af12)
+" width = 212>
 <figure>
 
 
@@ -203,31 +211,40 @@ EfficientNet 초기 학습 속도가 특히 오래 걸림
 ### 3. accuracy 비교
 
 1. VGGNet16 : 86.65 %
-<img src = "https://drive.google.com/uc?id=1j7kfWpQ-HhzD6g4VIk0gWb5KAxBRubMW" height = 300 width = 1000>
+<img src = "" height = 300 width = 1000>
 2. EfficientNet V2 B0 : 93.97 % (EfficientNetB0 성능 : 73.8047%)
-<img src = "https://drive.google.com/uc?id=1od1HZccHyytmNBGcl7NaNsLguGJ1cGI6" height = 300 width = 1000>
+<img src = "![image](https://github.com/kmj0825/DL_Project/assets/67963713/40dc7982-8345-4b82-9d1f-a96236b70c61)
+" height = 300 width = 1000>
 3. ViT : 88.81 %
-<img src = "https://drive.google.com/uc?id=19cEpBPSnASxGpYQHFYjlHv0PQIwzKVtg" height = 300 width = 1000>
+<img src = "![image](https://github.com/kmj0825/DL_Project/assets/67963713/c6514f53-b8b6-4af2-aaa8-902b5780b25f)
+" height = 300 width = 1000>
 
 
 ### 모델 선정 결과 : EfficientNetV2
 
-### 4. 시각화 방식 비교 
+### 4. 시각화 방식 사용 
 
 
 ####CAM :  Global Average Pooling(이하 GAP) 레이어를 통해  암묵적인 attention을 드러내는 generic localizable deep representation을 구축하는 방법
-<img src = "https://drive.google.com/uc?id=1eC_Yi-2WrPqgvxUDiYScDhzXiH7Hr12D">
+<img src = "![image](https://github.com/kmj0825/DL_Project/assets/67963713/b1eee3df-6e89-4fff-a6ec-501a95ba2523)
+">
 
-#### CAM 시각화
+### Grad-CAM 시각화
+- CAM 의 일반화 -> Grad-CAM
+- 어떤 target concept일지라도 final convolutional layer로 흐르는 gradient를 사용하여 이미지의 중요한 영역을 강조하는 localization map을 제작
 
 실제 이미지 판별시 확인하는 부분 
 
 
 ---
 <figure class="third">
-    <img src = "https://drive.google.com/uc?id=1RJbmau1Jb_7CoQNHdJC63WG0QGvcwsic" width=300>
-    <img src = "https://drive.google.com/uc?id=1HYIFc6lNiRf_qN1AKypsScNVpHBtvQUf" width=300>
-    <img src = "https://drive.google.com/uc?id=1OaBc4YjfxJ-XB1bfOn6WM4jHWoQuOPq4" width=300>
+    <img src = "![image](https://github.com/kmj0825/DL_Project/assets/67963713/eaf0cd10-191b-4e16-b9b1-25403eef5a67)
+" width=300>
+    <img src = "![image](https://github.com/kmj0825/DL_Project/assets/67963713/2aa28b10-80a6-4de7-b1c3-94d280dda329)
+" width=300>
+    <img src = "![image](https://github.com/kmj0825/DL_Project/assets/67963713/02193dec-01a0-44ba-8f62-912e7b773e9f)
+
+" width=300>
 <figure>
 
 생성 이미지 판별시 확인하는 부분 
@@ -235,24 +252,14 @@ EfficientNet 초기 학습 속도가 특히 오래 걸림
 
 ---
 <figure class="half">
-    <img src = "https://drive.google.com/uc?id=1H3EYwCVj4mGUUk_QpboNIGMGn2qBeLgh" width=300>
-    <img src = "https://drive.google.com/uc?id=1BgoX97AIOp014Zp2z1vAo0Au2vBYxswS" width=300>
+    <img src = "![image](https://github.com/kmj0825/DL_Project/assets/67963713/dcb73d9b-1ddf-47e2-9c0b-27753ffcdd61)
+" width=300>
+    <img src = "![image](https://github.com/kmj0825/DL_Project/assets/67963713/d5ddd5f9-10d5-4515-b5c7-a8597b37c7bc)
+" width=300>
    
 <figure>
 
-### Grad-CAM 시각화
-- CAM 의 일반화 -> Grad-CAM
-- 어떤 target concept일지라도 final convolutional layer로 흐르는 gradient를 사용하여 이미지의 중요한 영역을 강조하는 localization map을 제작
 
-
-실제 이미지 판별시 확인하는 부분
-
----
-<figure class="third">
-    <img src = "https://drive.google.com/uc?id=1EwtdDJ1LFekfx6GpfDEv1oCqnGUQ7uZE" width=300>
-    <img src = "https://drive.google.com/uc?id=1EtyZX46-LXstZhddnL-i4cK6SEX979ot" width=300>
-    <img src = "https://drive.google.com/uc?id=10oSaYgNmvyS2PICrkM5jy7kqHT6_hEYT" width=300>
-<figure>
 
 ## **5. 결과** 
 
